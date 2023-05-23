@@ -7,7 +7,7 @@ export default function Home() {
       <header className={styles.grid}>
         <h1>Customers</h1>
         <form>
-          <fieldset>
+          <fieldset id='SearchForm'>
             <legend>Search for a customer</legend>
             <input
               type='search'
@@ -29,6 +29,21 @@ export default function Home() {
           </li>
         </ul>
       </main>
+      <footer>
+        <form id='Pagination'>
+          <fieldset>
+            <legend>Page results</legend>
+            <label for='PaginationSelect'>
+              Page
+              <select name='Pagination' id='PaginationSelect'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+              </select>
+              of x
+            </label>
+          </fieldset>
+        </form>
+      </footer>
     </>
   );
 }
