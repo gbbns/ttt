@@ -1,21 +1,13 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import getData from '@/lib/fetch-data';
+
 import Link from 'next/link';
 
-async function getData() {
-  const res = await fetch(
-    'https://thawing-plains-90222.herokuapp.com/customers'
-  );
+import styles from '../page.module.css';
+export const dynamicParams = true;
 
-  // Handle errors
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
-
-export default async function Home() {
+export default async function Home({ params }) {
+  const { page } = params;
+  console.log(page);
   const data = await getData();
   return (
     <>
