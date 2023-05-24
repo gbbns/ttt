@@ -7,7 +7,6 @@ export const dynamicParams = true;
 
 export default async function Home({ params }) {
   const { page } = params;
-  console.log(page);
   const data = await getData();
   return (
     <>
