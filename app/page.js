@@ -1,13 +1,9 @@
-import getData from '@/lib/fetch-data';
-
+import fetchData from '@/lib/fetch-data';
 import Link from 'next/link';
+import styles from './page.module.css';
 
-import styles from '../page.module.css';
-export const dynamicParams = true;
-
-export default async function Home({ params }) {
-  const { page } = params;
-  const data = await getData();
+export default async function Home() {
+  const data = await fetchData();
   return (
     <>
       <header className={styles.grid}>
