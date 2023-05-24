@@ -1,7 +1,22 @@
 import Image from 'next/image';
 import styles from './page.module.css';
+import Link from 'next/link';
 
-export default function Home() {
+async function getData() {
+  const res = await fetch(
+    'https://thawing-plains-90222.herokuapp.com/customers'
+  );
+
+  // Handle errors
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const data = await getData();
   return (
     <>
       <header className={styles.grid}>
@@ -20,20 +35,24 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <ul>
-          <li>
-            <a href='#'>
-              <h2>Customer name</h2>
-              <p>Customer email</p>
-              <p>Customer details</p>
-            </a>
-          </li>
+          {data.customers.map((customer, index) => (
+            <li key={index}>
+              <Link key={index} href={`/customers/${customer.id}`}>
+                <h3>{customer.name}</h3>
+                <p>{customer.email}</p>
+                <p>
+                  {customer.country_code} {customer.city}
+                </p>
+              </Link>
+            </li>
+          ))}
         </ul>
       </main>
       <footer>
         <form id='Pagination'>
           <fieldset>
             <legend>Page results</legend>
-            <label for='PaginationSelect'>
+            <label htmlFor='PaginationSelect'>
               Page
               <select name='Pagination' id='PaginationSelect'>
                 <option value='1'>1</option>
