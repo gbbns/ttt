@@ -8,10 +8,11 @@ export default async function Page({ params }) {
         <Link href='/'>Back to customers</Link>
         <div className='customer__information'>
           <h3>{data.name}</h3>
-          <p>{data.email}</p>
           <p>
-            {data.country_code}
-            {data.city}
+            <a href={`mailto:${data.email}`}>{data.email}</a>
+          </p>
+          <p>
+            {data.country_code} {data.city}
           </p>
           <p>{data.address}</p>
         </div>
