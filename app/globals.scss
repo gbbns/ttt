@@ -4,8 +4,10 @@
 
 .data-wrapper {
   display: flex;
-  max-width: 100%;
   flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 
   &__item {
       list-style: none;
@@ -24,4 +26,17 @@
     &__link:hover {
       box-shadow: 0 0px 12px 2px rgb(0 0 0);
     }
+}
+
+.content__wrapper {
+    display: flex;
+      padding: 2rem;
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+
+  &-form {
+    align-items: flex-end;
+  }
 }

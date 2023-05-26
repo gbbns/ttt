@@ -80,10 +80,6 @@ h1 {
 }
 
 h2 {
-    // font-size: 3.157rem;
-    // font-size: var(--h2);
-    // font-size: clamp(1.5rem, calc(1.5rem + 2vw), var(--h2));
-    // font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
     font-size: clamp(1.5rem, 2vw + 1rem, var(--h2));
 
     line-height: 1.1;
@@ -92,7 +88,6 @@ h2 {
 }
 
 h3 {
-    // font-size: 2.369rem;
     font-size: var(--h3);
     line-height: 1.1;
     margin: 0;
@@ -100,12 +95,10 @@ h3 {
 }
 
 h4 {
-    // font-size: 1.777rem;
     font-size: var(--h41);
 }
 
 h5 {
-    // font-size: 1.333rem;
     font-size: var(--h5);
 }
 
@@ -159,7 +152,6 @@ blockquote {
 }
 
 p {
-    display: inline-block;
     margin: 0 0 $base-spacing * 1.5 0;
     margin-bottom: 1rem;
 

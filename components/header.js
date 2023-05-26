@@ -1,10 +1,10 @@
 export default function Header() {
   return (
     <>
-      <header>
+      <header className='content__wrapper'>
         <h1>Customers</h1>
-        <form>
-          <fieldset id='SearchForm'>
+        <form id='SearchForm' className='content__wrapper-form'>
+          <fieldset>
             <legend>Search for a customer</legend>
             <input
               type='search'

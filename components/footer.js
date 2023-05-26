@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <>
-      <footer>
-        <form id='Pagination'>
+      <footer className='content__wrapper'>
+        <form id='Pagination' className='content__wrapper-form'>
           <fieldset>
             <legend>Page results</legend>
             <label htmlFor='PaginationSelect'>
