@@ -3,18 +3,26 @@
 @import './styles/base';
 
 .data-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   max-width: 100%;
   margin: 0;
   padding: 0;
 
+  @media (min-width: 40em) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__item {
     list-style: none;
-    flex: 1 1 calc(25% - $base-spacing);
     border: 2px solid;
     margin-right: $base-spacing;
     margin-bottom: $base-spacing;
+    width: 100%;
+
+    @media (min-width: 40em) {
+      flex: 1 1 calc(25% - $base-spacing);
+      width: auto;
+    }
   }
 
   &__link {
@@ -26,15 +34,22 @@
   &__link:hover {
     box-shadow: 0 0px $base-spacing * 1.5 2px $palette-black
   }
+
+  p {
+    word-break: break-word;
+  }
 }
 
 .content__wrapper {
-  display: flex;
   padding: 2rem;
-  flex: 1;
-  flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+
+  @media (min-width: 40em) {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &-form {
     align-items: flex-end;
