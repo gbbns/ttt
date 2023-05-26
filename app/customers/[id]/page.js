@@ -4,9 +4,9 @@ export default async function Page({ params }) {
   const data = await fetchCustomerData(params.id);
   return (
     <>
-      <main className='content__wrapper'>
+      <main className='content__wrapper customer__wrapper'>
         <Link href='/'>Back to customers</Link>
-        <div>
+        <div className='customer__information'>
           <h3>{data.name}</h3>
           <p>{data.email}</p>
           <p>
