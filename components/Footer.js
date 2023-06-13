@@ -1,4 +1,4 @@
-import Paginator from './components/Paginator';
+import Paginator from './Paginator';
 
 export default function Footer() {
   return (

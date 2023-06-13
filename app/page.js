@@ -1,8 +1,8 @@
 import fetchData from '@/lib/fetch-data';
 import Link from 'next/link';
 
-import Header from '@/Header';
-import Footer from '@/Footer';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import CustomerLink from '@/components/CustomerLink';
 
 export default async function Home() {
