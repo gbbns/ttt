@@ -2,11 +2,12 @@ import fetchData from '@/lib/fetch-data';
 import Link from 'next/link';
 
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Footer from '@/Footer';
 import CustomerLink from '@/components/CustomerLink';
 
 export default async function Home() {
   const data = await fetchData();
+  console.log(data);
   return (
     <>
       <Header />
