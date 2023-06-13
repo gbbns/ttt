@@ -8,6 +8,7 @@ import CustomerLink from '@/components/CustomerLink';
 export default async function Home() {
   const data = await fetchData();
   console.log(data);
+
   return (
     <>
       <Header />
