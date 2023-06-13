@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CustomerLink from '@/components/CustomerLink';
 
 export default async function Home() {
   const data = await fetchData();
@@ -18,11 +19,12 @@ export default async function Home() {
                   key={index}
                   href={`/customers/${customer.id}`}
                   className='data-wrapper__link'>
-                  <h3>{customer.name}</h3>
-                  <p>{customer.email}</p>
-                  <p>
-                    {customer.country_code} {customer.city}
-                  </p>
+                  <CustomerLink
+                    name={customer.name}
+                    email={customer.email}
+                    country_code={customer.country_code}
+                    city={customer.city}
+                  />
                 </Link>
               </li>
             ))}
