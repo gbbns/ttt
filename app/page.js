@@ -1,7 +1,7 @@
 import fetchData from '@/lib/fetch-data';
 import Link from 'next/link';
 
-import Header from '@/components/Header';
+import Header from '@/Header';
 import Footer from '@/Footer';
 import CustomerLink from '@/components/CustomerLink';
 
