@@ -1,5 +1,6 @@
 import fetchCustomerData from '@/lib/fetch-customer-data';
 import Link from 'next/link';
+
 export default async function Page({ params }) {
   const data = await fetchCustomerData(params.id);
   return (
