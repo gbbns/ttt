@@ -25,4 +25,6 @@ There are a few CSS tweaks I'd like to have made, but, time was a factor.
 ### Since initial submission
 
 - Broken pages down into smaller, single responsibility components - or as close to as possible (continually refactoring as I go)
+- Added `swr` to enable react hook for data fetching for search
+
 - Next up is to wire up the pagination form. Plan is to hit API, get current pagination data, set initial page to `1` then have an event handler on the select to update page when user has selected
